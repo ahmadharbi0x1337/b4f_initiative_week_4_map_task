@@ -38,6 +38,9 @@ const drawMap = () => {
   const coordinates = [33.50838962121624, 36.285922708738624];
   //33.50838962121624, 36.285922708738624
 
+  // Array of distances
+  const distances = [];
+
   //   Map Init
   var myMap = L.map("map").setView(coordinates, 12);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -46,9 +49,29 @@ const drawMap = () => {
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(myMap);
   var marker = L.marker(coordinates).addTo(myMap);
+
+  // calculate distance
+  data.map((person) => {
+    const coords = person["coords"];
+    var m = L.marker(coords).addTo(myMap);
+    const distance = myMap.distance(coordinates, coords);
+    distances.push(distance);
+    // console.log(distance);
+    console.log(distances);
+  });
+
+  // calculate avg
+  let count = 0;
+  const sum = distances.reduce((acc, current) => {
+    count++;
+    return acc + current;
+  }, 0);
+  const avg = sum / count;
+
+  console.log(avg);
 };
 
-const drawBtn = document.getElementById("draw"); 
+const drawBtn = document.getElementById("draw");
 
 drawBtn.addEventListener("click", (e) => {
   hideForm("form");
