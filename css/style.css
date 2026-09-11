@@ -1,4 +1,57 @@
-#map {
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+}
+#container {
+  background-color: azure;
+  padding: 15px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90vw;
+}
+#location-picker-map {
   height: 200px;
   width: 400px;
+}
+#map {
+  height: 50vh;
+  width: 50vw;
+  box-sizing: border-box;
+}
+fieldset {
+  border: 2px solid blue;
+  padding: 25px;
+}
+
+.btns {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+}
+#save {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: blue;
+  border: 1px solid azure;
+  padding: 10px;
+}
+#draw {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: red;
+  border: 1px solid azure;
+  padding: 10px;
+}
+
+#test {
+  position: absolute;
+  bottom: 0;
 }

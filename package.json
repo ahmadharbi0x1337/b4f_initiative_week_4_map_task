@@ -1,0 +1,31 @@
+{
+  "name": "b4f_initiative_week_4_map_task",
+  "version": "1.0.0",
+  "description": "an internal project/task to deal with and work with maps in js, DOM, and libs.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadharbi0x1337/b4f_initiative_week_4_map_task.git"
+  },
+  "keywords": [],
+  "author": "group 4",
+  "class": 1,
+  "teamLeader": "Enas Barda",
+  "members": [
+    "Ahmad Alharbi",
+    "Yousef Bakr",
+    "Jamal Aldahak"
+  ],
+  "license": "ISC",
+  "type": "module",
+  "vendors": {
+    "leafletjs": "1.9.4+v1.d15112c"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmadharbi0x1337/b4f_initiative_week_4_map_task/issues"
+  },
+  "homepage": "https://github.com/ahmadharbi0x1337/b4f_initiative_week_4_map_task#readme"
+}

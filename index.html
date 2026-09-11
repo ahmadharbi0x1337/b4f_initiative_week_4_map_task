@@ -6,40 +6,58 @@
     <title>Map Form</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="/vendors/leaflet/dist/leaflet.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <form action="#" id="form">
-      <fieldset>
-        <label for="name">Full Name</label>
-        <input id="name" type="text" required placeholder="Your Name" />
-        <br />
+    <div id="container">
+      <!-- Form -->
+      <form action="#" id="form">
+        <fieldset>
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" required placeholder="Your Name" />
+          </div>
+          <br />
 
-        <h4>Gender</h4> 
-        <br />
-        <input type="radio" id="male" name="gender" value="male" />
-        <label for="male">Male</label><br />
-        <input type="radio" id="female" name="gender" value="female" />
-        <label for="female">Female</label><br />
-
-        <h4>Coordinates</h4>
-        <label for="lang">Lang</label>
-        <input type="number" required id="lang" />
-        <label for="lang">Lat</label>
-        <input type="number" required id="lat" />
-        <!-- TODO -->
-        <!-- Save Btn -->
-        <button type="button" id="save">Save</button>
-        <!-- Draw Btn -->
-        <button type="button" id="draw">Draw</button>
-      </fieldset>
-      <!-- Draw Btn -->
-    </form>
-    <div id="map"></div>
+          <h4>Gender</h4>
+          <br />
+          <div>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br />
+          </div>
+          <h4>Coordinates</h4>
+          <div>
+            <label for="lang">Lat</label>
+            <input type="number" required id="lat" />
+            <label for="lang">Long</label>
+            <input type="number" required id="long" />
+            <!-- Separate map only for selecting location -->
+            <div id="location-picker-map"></div>
+          </div>
+          <div class="btns">
+            <!-- Save Btn -->
+            <button type="button" id="save">Save</button>
+            <!-- Draw Btn -->
+            <button type="button" id="draw">Draw</button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- Map -->
+      <div id="map"></div>
+      <!-- Winner -->
+      <div id="winner"></div>
+      <!-- Test Button -->
+      <button type="button" id="test">
+        Test With Pre-Made Data (Fill Array Objects)
+      </button>
+    </div>
+    <!-- LeafLet JS -->
     <script src="/vendors/leaflet/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="/js/lib.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
-
-<!-- Lowest and Highest -->
-<!-- Syria are approximately Latitude 32.5° N to 37.5° N and Longitude 35.5° E to 42.5° E -->
